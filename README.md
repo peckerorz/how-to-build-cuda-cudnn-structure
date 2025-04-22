@@ -34,6 +34,12 @@ cuda-cudnn搭建指南
 
 🔗 [CUDA 12.8 下载页面](https://developer.nvidia.com/cuda-1280-download-archive)
 
+对于旧版的cuda：
+
+NVIDIA 把历史版本 cuda 放在了另一个页面中：
+
+🔗 [cuda Archive cuda 历史版本下载](https://developer.nvidia.com/cuda-toolkit-archive)
+
 - 选择 Windows → exe (local) 安装方式
 - 安装时选择 **自定义安装**
 - 安装路径设置为：`D:\Nvida_cuda`
@@ -54,9 +60,15 @@ cuda-cudnn搭建指南
 | `include\*.h`        | `D:\Nvida_cuda\include\`                 |
 | `lib\x64\*.lib`      | `D:\Nvida_cuda\lib\x64\`                 |
 
+对于旧版的cudnn：
+
+NVIDIA 把历史版本 cuDNN 放在了另一个页面中：
+
+🔗 [cuDNN Archive cuDNN 历史版本下载](https://developer.nvidia.com/rdp/cudnn-archive)
+
 ### 4. 下载 pytorch
 
-🔗 [cuDNN 下载页面](https://pytorch.org/get-started/locally/)
+🔗 [pytorch 下载页面](https://pytorch.org/get-started/locally/)
 
 选择相应的cuda，cdunn版本，然后复制页面中bash代码至terminal运行即可。
 
@@ -107,10 +119,12 @@ print(torch.cuda.get_device_name(0))    # 显卡名称（如 RTX 4060）
 ### 1. 注意cuda， cudnn， pytorch的版本应该相互适配，
 
 例如：cuda（12.8.x）- cudnn（9.8.x）- pytorch（...cu128）
+
 pytorch pip ： pip3 install --pre torch torchvision torchaudio --index-url https://download.pytorch.org/whl/nightly/cu128
 
 ### 2. 注意环境变量的设置应该齐全。
 
 ### 3. 注意在jupyter notebook中需要restart kernel才能“激活”cuda。
+
 
 
